@@ -4,7 +4,7 @@
 import re
 
 
-# Código de éxito general para ambas funciones solicitadas por el profesor con los nombres requeridos por el test.
+# Código de éxito general para ambas funciones 
 codigo_exito = 0
 
 # Códigos de error para count_char (exactamente los que exige el test).
@@ -17,7 +17,7 @@ err_caracter_invalido = -300
 err_param_tipo = -400         # parámetros no son enteros válidos
 err_multiplo_invalido = -500  # 'multiplo' no está en {1, 2, 4, 8, 16}.
 
-#Patrón regex para validar alfanumérico ASCII estricto en toda la cadena:
+# Patrón regex para validar alfanumérico ASCII estricto en toda la cadena:
 #   ^ y $ anclan inicio y fin (la cadena completa debe cumplir el patrón).
 #   [A-Za-z0-9]+ uno o más caracteres alfanuméricos ASCII.
 _ascii_alnum_re = re.compile(r'^[A-Za-z0-9]+$')
@@ -71,7 +71,7 @@ def multiplo_2(base, multiplo):
         return err_param_tipo, None
 
     # b) Validar que 'multiplo' esté en el conjunto permitido {1, 2, 4, 8, 16}.
-    if multiplo not in {1, 2, 4, 8,16}:
+    if multiplo not in {1, 2, 4, 8, 16}:
         return err_multiplo_invalido, None
 
     #  c) Cálculo SIN '+', '*' ni bucles mediante desplazamiento de bits:
@@ -88,3 +88,4 @@ def multiplo_2(base, multiplo):
 
     # d) Devolver éxito y el resultado calculado.
     return codigo_exito, resultado
+
